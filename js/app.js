@@ -113,8 +113,7 @@ for (let ex of exp) {
                 break;
             case '=':
                 display.value = result;
-                result = 0;
-                clickednum = 0;
+                clickednum = result;
 
                 break;
             case 'C':
