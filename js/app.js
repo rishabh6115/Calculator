@@ -4,6 +4,22 @@ const exp = document.querySelectorAll('.exp')
 const nightmode = document.querySelector('.night')
 const mycal = document.querySelector('.mycal')
 
+document.addEventListener('keydown', function(e) {
+    // console.log(e.key)
+    let inputNum = e.key
+    display.append(e.key);
+
+    if (e.key == '=' || e.key == 'Enter') {
+        const res = eval(display.value)
+        display.value = res;
+    }
+})
+
+
+
+
+
+
 nightmode.addEventListener('click', function() {
 
     nightmode.classList.toggle('btn1-night')
@@ -118,7 +134,7 @@ for (let ex of exp) {
                 break;
             case 'C':
                 result = 0;
-                display.value = '0';
+                display.value = 0;
                 break;
             case '00':
                 let addzero = `${result}00`
