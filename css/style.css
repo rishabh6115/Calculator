@@ -37,12 +37,13 @@
 input {
     text-align: center;
     margin: 24px;
-    margin-left: 7px;
+    /* margin-left: 7px; */
     /* margin-bottom: 8px; */
     border-radius: 10px;
     border: 1px solid #a6d68c;
     color: #1a6706;
     font-size: x-large;
+    width: ;
 }
 
 input::-webkit-outer-spin-button,
@@ -172,6 +173,7 @@ input:focus {
         align-items: center;
     }
     input {
+        width: -webkit-fill-available;
         margin: 24px;
     }
 }
