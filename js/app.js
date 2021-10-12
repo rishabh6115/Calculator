@@ -3,9 +3,11 @@ const display = document.querySelector('input')
 const exp = document.querySelectorAll('.exp')
 const nightmode = document.querySelector('.night')
 const mycal = document.querySelector('.mycal')
+let audio = new Audio('aaa.mp3')
 
 document.addEventListener('keydown', function(e) {
     // console.log(e.key)
+
     let inputNum = e.key
     display.append(e.key);
 
@@ -22,6 +24,9 @@ document.addEventListener('keydown', function(e) {
 
 nightmode.addEventListener('click', function() {
 
+
+
+    audio.play();
     nightmode.classList.toggle('btn1-night')
     mycal.classList.toggle('mycal-night')
     display.classList.toggle('input-night')
@@ -47,6 +52,7 @@ const evaluate = {
 }
 for (let num of nums) {
     num.addEventListener('click', function() {
+        audio.play();
         clickednum = parseInt(num.textContent)
 
         for (let obj in evaluate) {
@@ -93,6 +99,7 @@ for (let num of nums) {
 
 for (let ex of exp) {
     ex.addEventListener('click', function() {
+        audio.play();
         switch (ex.innerText) {
             case '+':
                 if (result !== 0) {
